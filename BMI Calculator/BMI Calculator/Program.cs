@@ -25,7 +25,7 @@ namespace BMI_Calculator
             bmi = Math.Round(bmi2, 2);
 
 
-            Console.WriteLine("Twoje BMI to: {0} \n", bmi);
+            Console.WriteLine("Twoje BMI to: {0} \n", bmi) da;
 
 
             if (bmi <= 16.00)
