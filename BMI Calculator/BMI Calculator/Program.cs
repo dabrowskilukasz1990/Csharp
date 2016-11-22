@@ -18,9 +18,8 @@ namespace BMI_Calculator
             Console.WriteLine("podaj swoja wage (w kg): ");
             waga = double.Parse(Console.ReadLine());
 
-            waga = waga * 10000;
 
-            bmi2 = (waga / (wzrost * wzrost));
+            bmi2 = (waga / (wzrost * wzrost)*10000);
 
             bmi = Math.Round(bmi2, 2);
 
@@ -32,7 +31,7 @@ namespace BMI_Calculator
             {
                 Console.WriteLine("Twoj organizm jest wyglodzony !\n");
             }
-            else if (bmi > 16.00 && bmi <= 17.00)
+            else if (bmi > 16.00 && bmi <= 17.00) 
             {
                 Console.WriteLine("Jestes wychudzony\n");
 
