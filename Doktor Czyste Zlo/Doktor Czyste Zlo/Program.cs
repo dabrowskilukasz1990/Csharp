@@ -10,14 +10,13 @@ namespace Doktor_Samo_Zlo
 
             Random kulaOgnia = new Random();
 
-
-            for (int i = 0; i <= 10; i++)
+            for (int i = 1; i <= 10; i++)
             {
                 Console.WriteLine("{0}. Bajtek powinienes osłaniac nasze plecy ! \nUwazaj żeby Doktor Czyste Zlo nas nie zaatakowal !", i);
                 Console.ReadLine();
 
 
-                if (kulaOgnia.Next(0, 10) < 5)
+                if (kulaOgnia.Next(20) <= 10)
                 {
                     Console.WriteLine("UWAZAJ! Leci kula ognia! Doktor Czyste Zlo atakuje!");
 
