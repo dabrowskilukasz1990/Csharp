@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Doktor_Samo_Zlo
 {
@@ -23,7 +19,7 @@ namespace Doktor_Samo_Zlo
 
                 if (kulaOgnia.Next(0, 10) < 5)
                 {
-                    Console.WriteLine("UWAZAJ! Leci kula ognia! Czyste Zlo atakuje!");
+                    Console.WriteLine("UWAZAJ! Leci kula ognia! Doktor Czyste Zlo atakuje!");
 
                     tarcza = "Woda";
 
