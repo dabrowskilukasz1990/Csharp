@@ -10,20 +10,25 @@ namespace PESEL
     {
         static void Main(string[] args)
         {
-            string pesel;
-            int suma;
+            char pesel;
+            string peselChar;
             int[] waga = new int[10] { 1, 3, 7, 9, 1, 3, 7, 9, 1, 3 };
-            
+
 
             Console.WriteLine("Podaj PESEL:");
-            pesel = Convert.ToInt32(Console.Read());
-
-            for (int i = 0; i < pesel.Length; i++)
+            while (true)
             {
-                suma = pesel * waga[i];
-                Console.WriteLine(pesel);
+                
+                pesel = (char)Console.Read();
+                peselChar = pesel.ToString();
+                Console.WriteLine(peselChar);
+                break;
 
             }
+            //Console.WriteLine("Podaj PESEL:");
+            //pesel = (char) Console.Read();
+            //peselChar = pesel.ToString();
+            //Console.WriteLine(peselChar);
            
         }
     }

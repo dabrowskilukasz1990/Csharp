@@ -10,18 +10,25 @@ namespace Bisekcja
     {
         static void Main(string[] args)
         {
-            
-            Console.WriteLine("Podaj liczbe do bisekcji ?");
+            // (delta) = b2 *4ac;
+            Console.WriteLine("Podaj liczbe A do bisekcji");
+            int a = int.Parse(Console.ReadLine());
+            Console.WriteLine("Podaj liczbe B do bisekcji");
+            int b = int.Parse(Console.ReadLine());
 
-            int liczba = int.Parse(Console.ReadLine());
-            int wynik = int.Parse(Console.ReadLine());
-
-            if (liczba / 2 == wynik)
+            if (true)
             {
-                Console.WriteLine("Twoj wynik to {0}", wynik);
+
             }
-            else
-                Console.WriteLine("SSIJ");
+
+            while (true)
+            {
+                int wynik = liczba / 2;
+                Console.WriteLine("Twoj wynik to {0}", wynik);
+                break;
+            }
+                
+
         }
     }
 }
