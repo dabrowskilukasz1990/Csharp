@@ -8,27 +8,50 @@ namespace Bisekcja
 {
     class Program
     {
+
         static void Main(string[] args)
         {
-            // (delta) = b2 *4ac;
-            Console.WriteLine("Podaj liczbe A do bisekcji");
+            Random liczba = new Random();
+
+            // Obliczamy wartość funkcji f(x) = x3 - x2 + 2x - 1 na krańcach przedziału < 0 , 1 >;
+            Console.WriteLine("Podaj liczbe A przydzialu");
             int a = int.Parse(Console.ReadLine());
-            Console.WriteLine("Podaj liczbe B do bisekcji");
+            Console.WriteLine("Podaj liczbe B przydzialu");
             int b = int.Parse(Console.ReadLine());
 
-            if (true)
-            {
+            double c = (a + b) / 2; // srodek przydzialu
+            //double xA = (a * a * a) - (a * a) + 2 * a - 1; //kraniec A przedzialu
+            //double xB = (b * b * b) - (b * b) + 2 * b - 1; //kraniec B przedzialu
+            //double xAxB = (xA + xB) / 2; // srodek przydzialu
+            //double x0 = (xAxB * xAxB * xAxB) - (xAxB * xAxB) + 2 * xAxB - 1; // wartosc funkcji w miejscu zerowym
 
-            }
+            Console.WriteLine("Srodek przydzialu: {0}", c);
 
             while (true)
             {
-                int wynik = liczba / 2;
-                Console.WriteLine("Twoj wynik to {0}", wynik);
+                double index = liczba.Next(a, b);
+
+                if (index > c)
+                {
+                    c = a;
+                    Console.WriteLine("Random został okrojony");
+                }
+                else if (index < c)
+                {
+                    double d = (a + b) / 2;
+                    Console.WriteLine("Indx został okrojony");
+                }
                 break;
-            }
                 
 
+            }
+            //Console.WriteLine("Przydzial A: {0}", xA);
+            //Console.WriteLine("Przydzial B: {0}", xB);
+
+            //Console.WriteLine("Wartosc funkcji w srodku przydzialu: {0}", x0);
+
         }
+
     }
 }
+
