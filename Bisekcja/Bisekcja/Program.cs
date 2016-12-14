@@ -24,25 +24,26 @@ namespace Bisekcja
             //double xB = (b * b * b) - (b * b) + 2 * b - 1; //kraniec B przedzialu
             //double xAxB = (xA + xB) / 2; // srodek przydzialu
             //double x0 = (xAxB * xAxB * xAxB) - (xAxB * xAxB) + 2 * xAxB - 1; // wartosc funkcji w miejscu zerowym
-
+            double index = liczba.Next(a, b);
             Console.WriteLine("Srodek przydzialu: {0}", c);
-
+            Console.WriteLine("Random {0}", index);
             while (true)
             {
-                double index = liczba.Next(a, b);
-
-                if (index > c)
+                if (c == index)
                 {
-                    c = a;
-                    Console.WriteLine("Random został okrojony");
+                    Console.WriteLine("Liczba 0 to środek przydzialu");
                 }
-                else if (index < c)
+                else if (c < index)
                 {
                     double d = (a + b) / 2;
                     Console.WriteLine("Indx został okrojony");
                 }
+                else
+                {
+                    Console.WriteLine("bla");
+                }
                 break;
-                
+
 
             }
             //Console.WriteLine("Przydzial A: {0}", xA);
