@@ -11,37 +11,44 @@ namespace Bisekcja
 
         static void Main(string[] args)
         {
-            Random liczba = new Random();
+            Random number = new Random();
 
             // Obliczamy wartość funkcji f(x) = x3 - x2 + 2x - 1 na krańcach przedziału < 0 , 1 >;
-            Console.WriteLine("Podaj liczbe A przydzialu");
+            Console.WriteLine("Podaj liczbe A przydzialu (mniejsza)");
             int a = int.Parse(Console.ReadLine());
-            Console.WriteLine("Podaj liczbe B przydzialu");
+            Console.WriteLine("Podaj liczbe B przydzialu (wieksza)");
             int b = int.Parse(Console.ReadLine());
 
-            double c = (a + b) / 2; // srodek przydzialu
+            int c = (a + b) / 2; // srodek przydzialu
             //double xA = (a * a * a) - (a * a) + 2 * a - 1; //kraniec A przedzialu
             //double xB = (b * b * b) - (b * b) + 2 * b - 1; //kraniec B przedzialu
             //double xAxB = (xA + xB) / 2; // srodek przydzialu
             //double x0 = (xAxB * xAxB * xAxB) - (xAxB * xAxB) + 2 * xAxB - 1; // wartosc funkcji w miejscu zerowym
-            double index = liczba.Next(a, b);
+            int index = number.Next(a, b);
             Console.WriteLine("Srodek przydzialu: {0}", c);
             Console.WriteLine("Random {0}", index);
+
             while (true)
             {
+
+
+
                 if (c == index)
                 {
-                    Console.WriteLine("Liczba 0 to środek przydzialu");
+                    Console.WriteLine("Liczba {0} to środek przydzialu", index);
                 }
                 else if (c < index)
                 {
-                    double d = (a + b) / 2;
-                    Console.WriteLine("Indx został okrojony");
+                    int a = (a + b) / 2;
+                    c = a;
+                    
+                    Console.WriteLine("Index został okrojony");
                 }
-                else
+                else if (c > index)
                 {
+                    c = b;
                     Console.WriteLine("bla");
-                }
+                } 
                 break;
 
 

@@ -6,18 +6,19 @@ namespace BMI_Calculator
     {
         static void Main(string[] args)
         {
-            double waga, wzrost, bmi, bmi2;
-
+            double weight, height, bmi, bmi2;
+            
             while (true)
             {
 
                 Console.WriteLine("podaj swoj wzrost (w cm): ");
-                wzrost = double.Parse(Console.ReadLine());
+                height = double.Parse(Console.ReadLine());
                 Console.WriteLine("podaj swoja wage (w kg): ");
-                waga = double.Parse(Console.ReadLine());
+                weight = double.Parse(Console.ReadLine());
 
+                
 
-                bmi2 = (waga / (wzrost * wzrost) * 10000);
+                bmi2 = (weight / (height * height) * 10000);
 
                 bmi = Math.Round(bmi2, 2);
 
@@ -62,10 +63,7 @@ namespace BMI_Calculator
 
                 Console.WriteLine("Obliczyć bmi ponownie ? T/N");
 
-                if (Console.ReadLine() == "N")
-                    break;
-
-
+                if (Console.ReadLine().ToUpper() == "N") break;
             }
         }
     }
