@@ -6,9 +6,9 @@ namespace Doktor_Samo_Zlo
     {
         static void Main(string[] args)
         {
-            string tarcza;
+            string shield;
 
-            Random kulaOgnia = new Random();
+            Random fireBall = new Random();
 
             for (int i = 1; i <= 10; i++)
             {
@@ -16,13 +16,13 @@ namespace Doktor_Samo_Zlo
                 Console.ReadLine();
 
 
-                if (kulaOgnia.Next(20) <= 10)
+                if (fireBall.Next(20) <= 10)
                 {
                     Console.WriteLine("UWAZAJ! Leci kula ognia! Doktor Czyste Zlo atakuje!");
 
-                    tarcza = "Woda";
+                    shield = "Woda";
 
-                    Console.WriteLine("Tarcza: {0}", tarcza);
+                    Console.WriteLine("Tarcza: {0}", shield);
                     Console.ReadLine();
 
                 }
@@ -30,9 +30,9 @@ namespace Doktor_Samo_Zlo
                 {
                     Console.WriteLine("Uff, cale szczescie Doktor Czyste Zlo nas nie zaatakowal.");
 
-                    tarcza = "Brak tarczy";
+                    shield = "Brak tarczy";
 
-                    Console.WriteLine("Tarcza: {0}", tarcza);
+                    Console.WriteLine("Tarcza: {0}", shield);
                     Console.ReadLine();
                 }
 

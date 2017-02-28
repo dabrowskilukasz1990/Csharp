@@ -10,25 +10,25 @@ namespace Randomy
     {
         static void Main(string[] args)
         {
-            Random kolor = new Random();
+            Random color = new Random();
 
             
-            string[] buty = new string[6];
+            string[] shoes = new string[6];
 
-            buty[0] = "Niebieski";
-            buty[1] = "Rozowy";
-            buty[2] = "Fioletowy";
-            buty[3] = "Czarny";
-            buty[4] = "Zolty";
-            buty[5] = "Czerwony";
+            shoes[0] = "Niebieski";
+            shoes[1] = "Rozowy";
+            shoes[2] = "Fioletowy";
+            shoes[3] = "Czarny";
+            shoes[4] = "Zolty";
+            shoes[5] = "Czerwony";
 
             while (true)
             {
 
-                int index = kolor.Next(0, 6);
+                int index = color.Next(0, 6);
 
                 Console.WriteLine("Twój kolor butów na dzisiaj:");
-                Console.WriteLine(buty[index]);
+                Console.WriteLine(shoes[index]);
                 Console.ReadLine();
             }
 

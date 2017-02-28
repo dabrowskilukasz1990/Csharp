@@ -11,16 +11,16 @@ namespace Logowanie
         static void Main(string[] args)
         {
             string login;
-            string haslo;
+            string pass;
             while (true)
             {
                 Console.WriteLine("Podaj Login: ");
                 login = Console.ReadLine();
 
                 Console.WriteLine("Podaj Hasło: ");
-                haslo = Console.ReadLine();
+                pass = Console.ReadLine();
 
-                if (login == "123" && haslo == "123")
+                if (login == "123" && pass == "123")
                 {
                     Console.WriteLine("login i haslo prawidłowe\n");
                 }
@@ -28,7 +28,7 @@ namespace Logowanie
                 {
                     Console.WriteLine("login nieprawidłowy\n");
                 }
-                else if (haslo != "123")
+                else if (pass != "123")
                 {
                     Console.WriteLine("haslo nieprawidlowe\n");
                 }

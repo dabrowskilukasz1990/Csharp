@@ -7,10 +7,11 @@ namespace BMI_Calculator
         static void Main(string[] args)
         {
             double weight, height, bmi, bmi2;
-            
+
+
             while (true)
             {
-
+                
                 Console.WriteLine("podaj swoj wzrost (w cm): ");
                 height = double.Parse(Console.ReadLine());
                 Console.WriteLine("podaj swoja wage (w kg): ");

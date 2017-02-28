@@ -11,26 +11,28 @@ namespace Choinka
         static void Main(string[] args)
         {
             Console.WriteLine("Ile poziomow ma miec choinka ?");
-            int poziomy=int.Parse(Console.ReadLine());
-            int spacje = poziomy - 1;
-            int gwiazdki=0;
-            
+            int level = int.Parse(Console.ReadLine());
+            int whitespace = level - 1;
+            int star = 0;
 
-            if (poziomy>=1)
+
+            if (level >= 1)
             {
-                for (int i = 0; i < poziomy; i++)
+                for (int i = 0; i < level; i++)
                 {
-                    for (int j = 0; j < spacje; j++)
+                    for (int j = 0; j < whitespace; j++)
                     {
                         Console.Write(" ");
-                    }spacje--;
+                    }
+                    whitespace--;
                     Console.Write("/");
-                    for (int k = 0; k < gwiazdki; k++)
+                    for (int k = 0; k < star; k++)
                     {
                         Console.Write("*");
-                    }gwiazdki += 2;
+                    }
+                    star += 2;
                     Console.WriteLine("\\");
-                   
+
                 }
             }
         }
