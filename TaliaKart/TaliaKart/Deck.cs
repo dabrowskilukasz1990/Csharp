@@ -90,16 +90,16 @@ namespace TaliaKart
         //    }
         //    return 0;
         //}
-        public bool IsCardInList(Card newCard)
-        {
-            for (int currentCardIndex = 0; currentCardIndex < Cards.Count; currentCardIndex++)
-            {
-                if (newCard.Color == Cards[currentCardIndex])
-                {
+        //public bool IsCardInList(Card newCard)
+        //{
+        //    for (int currentCardIndex = 0; currentCardIndex < Cards.Count; currentCardIndex++)
+        //    {
+        //        if (newCard.Color == Cards[currentCardIndex])
+        //        {
 
-                }
-            }
-        }
+        //        }
+        //    }
+        //}
     }
 
 

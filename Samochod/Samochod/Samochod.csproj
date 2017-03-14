@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{32EA890F-939A-4B83-9CD8-8F3BD5C950C1}</ProjectGuid>
+    <ProjectGuid>{EF0E29FF-B7D7-4EEB-8EA0-206AD9BFDDB6}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>TaliaKart</RootNamespace>
-    <AssemblyName>TaliaKart</AssemblyName>
+    <RootNamespace>Samochod</RootNamespace>
+    <AssemblyName>Samochod</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,10 +43,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Card.cs" />
-    <Compile Include="Deck.cs" />
+    <Compile Include="PojemnikSamochod.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Samochod.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
