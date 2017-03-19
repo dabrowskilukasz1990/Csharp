@@ -12,7 +12,7 @@ namespace Szyfr_Cezara
         {
             string tekst;
             int przesun;
-            string[] alfabet; // 32
+
             Console.WriteLine("Podaj tekst do zaszyfrowania: ");
             tekst = Console.ReadLine();
             Console.WriteLine("Podaj o ile przesunąc tekst: ");
@@ -20,9 +20,32 @@ namespace Szyfr_Cezara
 
             for (int i = 0; i < tekst.Length; i++)
             {
-                tekst.Length = 2;
+                int szyfr = tekst.ElementAt(i);
+                int x;
+
+                if (szyfr >= 65 && szyfr <= 90)
+                {
+                    x = 65 + (szyfr + przesun - 65) % 26;
+                }
+                else if (szyfr >= 97 && szyfr <= 122)
+                {
+                    x = 97 + (szyfr + przesun - 97) % 26;
+                }
+                else
+                {
+                    x = 32;
+                }
+
+                char znakzm = (char)x;
+                Console.Write("" + znakzm);
+
+
             }
+            Console.ReadLine();
+
+
 
         }
+
     }
 }
