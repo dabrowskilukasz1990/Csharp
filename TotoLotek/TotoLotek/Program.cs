@@ -51,7 +51,7 @@ namespace TotoLotek
 
 
             int traf = 0;
-            foreach (int spr in sprawdzenie)
+            foreach (int spr in sprawdzenie) // Sprawdzenie czy została trafiona jakaś liczba.
             {
 
                 foreach (int lotek in totolotek)
