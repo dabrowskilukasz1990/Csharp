@@ -8,52 +8,67 @@ namespace TotoLotek
 {
     class Program
     {
-        static void Traf(int los, int lotek)
-        {
-            if (los == lotek)
-            {
-
-            }
-        }
-
         static void Main(string[] args)
         {
             Console.WriteLine("Podaj 6 liczb w zakresie od 1 do 50:");
 
             Random lotto = new Random();
-            
+
             List<int> totolotek = new List<int>();
+            List<int> sprawdzenie = new List<int>();
 
 
             for (int i = 1; i < 7; i++) // Podajemy liczby od 1 do 50.
             {
                 Console.WriteLine("Liczba {0}", i);
                 totolotek.Add(int.Parse(Console.ReadLine()));
+                sprawdzenie.Add(lotto.Next(1, 50));
                 Console.Clear();
+
+                totolotek.Sort();
+                sprawdzenie.Sort();
+
             }
 
 
-            totolotek.Sort();
+
             Console.WriteLine("Twoje obstawione liczby to: "); // Wyświetla obstawione liczby.
             foreach (int lotek in totolotek)
             {
-                
+
                 Console.WriteLine(lotek);
 
             }
 
-            
             Console.WriteLine("Liczby wylosowane przez komputer to: "); // Wyświetla wylosowane liczby przez komputer.
-            for (int i = 1; i < 7; i++)
+            foreach (int spr in sprawdzenie)
             {
-                int los = lotto.Next(1, 51);
-
-                Console.WriteLine(los);
+                Console.WriteLine(spr);
             }
+
+            Console.WriteLine("=====");
+
+
+
+            int traf = 0;
+            foreach (int spr in sprawdzenie)
+            {
+
+                foreach (int lotek in totolotek)
+                {
+
+                    if (spr == lotek)
+                    {
+                        traf++;
+                    }
+
+                }
+
+            }
+            Console.WriteLine("Ilość trafionych liczb: " + traf);
 
 
         }
     }
 }
-
 
