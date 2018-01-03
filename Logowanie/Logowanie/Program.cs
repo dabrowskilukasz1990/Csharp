@@ -26,11 +26,11 @@ namespace Logowanie
                 }
                 else if (login != "123")
                 {
-                    Console.WriteLine("login nieprawidłowy\n");
+                    Console.WriteLine("Login nieprawidłowy\n");
                 }
                 else if (pass != "123")
                 {
-                    Console.WriteLine("haslo nieprawidlowe\n");
+                    Console.WriteLine("Haslo nieprawidlowe\n");
                 }
                 else
                     Console.WriteLine("Nieprawidlowy login i haslo\n");
